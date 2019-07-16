@@ -9,11 +9,19 @@ import { CoreModule } from './core/core.module';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InicioComponent } from './modules/inicio/inicio.component';
+import { MisDatosComponent } from './modules/mis-datos/mis-datos.component';
+import { ListarComponent } from './modules/inscripciones/listar/listar.component';
+import { MisInscripcionesComponent } from './modules/mis-inscripciones/mis-inscripciones.component';
+import { CrearComponent } from './modules/inscripciones/crear/crear.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    InicioComponent
+    InicioComponent,
+    MisDatosComponent,
+    ListarComponent,
+    MisInscripcionesComponent,
+    CrearComponent
   ],
   imports: [
     BrowserModule,

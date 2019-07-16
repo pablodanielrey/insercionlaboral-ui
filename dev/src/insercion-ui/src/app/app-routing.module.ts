@@ -6,6 +6,10 @@ import { LoaderComponent } from './core/loader/loader.component';
 import { OidpGuard } from './core/oauth2/oidp.guard';
 import { SistemaComponent } from './core/sistema/sistema.component';
 import { InicioComponent } from './modules/inicio/inicio.component';
+import { MisDatosComponent } from './modules/mis-datos/mis-datos.component';
+import { ListarComponent } from './modules/inscripciones/listar/listar.component';
+import { MisInscripcionesComponent } from './modules/mis-inscripciones/mis-inscripciones.component';
+import { CrearComponent } from './modules/inscripciones/crear/crear.component';
 
 const routes: Routes = [
 
@@ -17,7 +21,16 @@ const routes: Routes = [
      canActivate: [OidpGuard],
      component: SistemaComponent,
      children: [
-      { path: 'inicio', component: InicioComponent }
+      { path: 'inicio', component: InicioComponent },
+      { path: 'mis_datos', component: MisDatosComponent },
+      { path: 'mis_inscripciones', component: MisInscripcionesComponent },
+      { 
+        path: 'inscripciones',
+        children: [
+          { path: 'crear', component: CrearComponent },
+          { path: 'listar', component: ListarComponent }
+        ]
+      }
      ]
   }
 

@@ -1,0 +1,30 @@
+
+<button mat-button (clikc)='crear()'>inscribirme</button>
+
+<mat-table matSort [dataSource]="inscripciones$ | async" multiTemplateDataRows>
+
+    <ng-container matColumnDef="oferta" >
+        <mat-header-cell mat-sort-header *matHeaderCellDef > Oferta </mat-header-cell>
+        <mat-cell *matCellDef="let n" > 
+            {{n}}
+        </mat-cell>  
+    </ng-container>
+
+    <ng-container matColumnDef="fecha" >
+        <mat-header-cell *matHeaderCellDef > Fecha </mat-header-cell>
+        <mat-cell *matCellDef="let n" > 
+            {{n.fecha | date: 'dd/MM/yyyy'}}
+        </mat-cell>  
+    </ng-container>
+
+    <ng-container matColumnDef="carrera" >
+            <mat-header-cell mat-sort-header *matHeaderCellDef > Carrera </mat-header-cell>
+            <mat-cell *matCellDef="let n" > 
+                {{n}}
+            </mat-cell>  
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="columnas()"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnas();"></mat-row>        
+
+</mat-table>
