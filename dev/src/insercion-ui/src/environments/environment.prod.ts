@@ -8,9 +8,9 @@ export const environment = {
   version: '0.0.1a',
 
   loader: {
-    cabecera: 'INSERCIONLABORAL | FCE',
+    cabecera: 'Inserción Laboral',
     version: '0.0.1a',
-    tituloSistema: 'INSERCIONLABORAL',
+    tituloSistema: 'INSERCION LABORAL',
     subtituloSistema: '',
     desarrolloSistema: 'DiTeSI | Dirección de Tecnologías y Sistemas Informáticos',
     logoSistema: '/assets/img/fce/logofce2018.png',

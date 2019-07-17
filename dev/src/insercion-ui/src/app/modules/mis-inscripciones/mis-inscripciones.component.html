@@ -1,30 +1,60 @@
+<mat-toolbar-row>
+        <span class="ruta">&nbsp; Inscripción</span>
+</mat-toolbar-row>
 
-<button mat-button (clikc)='crear()'>inscribirme</button>
+<mat-divider></mat-divider>
 
-<mat-table matSort [dataSource]="inscripciones$ | async" multiTemplateDataRows>
+<div class="pantalla">
 
-    <ng-container matColumnDef="oferta" >
-        <mat-header-cell mat-sort-header *matHeaderCellDef > Oferta </mat-header-cell>
-        <mat-cell *matCellDef="let n" > 
-            {{n}}
-        </mat-cell>  
-    </ng-container>
+        <mat-card>
+                <mat-card-content>
+                    <b>IMPORTANTE!</b>
+                  <p>
+                    Actualiza tus datos antes de realizar una nueva inscripción. Es importante que mantengas tus datos de contacto y educativos actualizados 
+                    porque a traves de ellos realizaremos las pre-selecciones para nuevas ofertas de trabajo. Para actualizar tu datos anda a <b>Menu</b> > <b><a routerLink="/sistema/mis_datos">Mis Datos</a></b>.     
 
-    <ng-container matColumnDef="fecha" >
-        <mat-header-cell *matHeaderCellDef > Fecha </mat-header-cell>
-        <mat-cell *matCellDef="let n" > 
-            {{n.fecha | date: 'dd/MM/yyyy'}}
-        </mat-cell>  
-    </ng-container>
+ 
+                  </p>
+                </mat-card-content>
+              </mat-card>
 
-    <ng-container matColumnDef="carrera" >
-            <mat-header-cell mat-sort-header *matHeaderCellDef > Carrera </mat-header-cell>
-            <mat-cell *matCellDef="let n" > 
-                {{n}}
-            </mat-cell>  
-    </ng-container>
+        <a mat-flat-button color="primary" routerLink="/sistema/inscripciones/crear" class="btnInscribirme">INSCRIBIRME AHORA</a>
 
-    <mat-header-row *matHeaderRowDef="columnas()"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: columnas();"></mat-row>        
 
-</mat-table>
+
+        <mat-table matSort [dataSource]="inscripciones$ | async" multiTemplateDataRows>
+        
+            <ng-container matColumnDef="oferta" >
+                <mat-header-cell mat-sort-header *matHeaderCellDef > Oferta </mat-header-cell>
+                <mat-cell *matCellDef="let n" > 
+                    {{n}}
+                </mat-cell>  
+            </ng-container>
+        
+            <ng-container matColumnDef="fecha" >
+                <mat-header-cell *matHeaderCellDef > Fecha </mat-header-cell>
+                <mat-cell *matCellDef="let n" > 
+                    {{n.fecha | date: 'dd/MM/yyyy'}}
+                </mat-cell>  
+            </ng-container>
+        
+            <ng-container matColumnDef="carrera" >
+                    <mat-header-cell mat-sort-header *matHeaderCellDef > Carrera </mat-header-cell>
+                    <mat-cell *matCellDef="let n" > 
+                        {{n}}
+                    </mat-cell>  
+            </ng-container>
+
+            <ng-container matColumnDef="acciones" >
+                    <mat-header-cell mat-sort-header *matHeaderCellDef > Acciones </mat-header-cell>
+                    <mat-cell *matCellDef="let n" > 
+                           <button mat-icon-button (click)="eliminar(inscripcion)"><mat-icon>delete_outline</mat-icon></button>
+                    </mat-cell>  
+            </ng-container>
+        
+            <mat-header-row *matHeaderRowDef="columnas()"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: columnas();"></mat-row>        
+        
+        </mat-table>
+
+</div>

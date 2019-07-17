@@ -1,0 +1,25 @@
+.pantalla {
+    padding: 20px;
+}
+
+.ruta {
+    opacity: .5;
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+    
+
+.btnInscribirme {
+    padding: 10px 30px 10px 30px;
+    margin: 20px 0 20px 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+        color: #eb3740;
+}
