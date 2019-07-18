@@ -1,3 +1,63 @@
  .pantalla {
       padding: 20px;
+      display: flex;
+      flex-direction: row;
   }
+
+.ruta {
+    opacity: .5;
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+    
+
+  .contenedorFoto {
+      width: 25%;
+      margin-right: 40px;
+  }
+
+  .icono {
+      opacity: .5;
+  }
+
+
+  .contenedorDatos {
+      width: 100%;
+  }
+
+  .contenedorBloques {
+      display: flex;
+    
+  }
+
+.bloque {
+    width: 40%;
+    padding: 20px;
+}
+
+  .itemFormulario {
+      width: 100%;
+  }
+
+  .contenedorMaterias {
+      display: flex;
+      justify-content: space-between;
+  }
+
+.itemMaterias {
+    width: 40%;
+}
+
+  .itemMedio {
+      width: 25%;
+  }
+
+  .contenedorIdiomas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.itemIdioma {
+    width: 48%;
+}

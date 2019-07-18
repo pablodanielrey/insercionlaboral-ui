@@ -1,29 +1,311 @@
+<mat-toolbar-row>
+    <span class="ruta">&nbsp; Mis Datos</span>
+</mat-toolbar-row>
+
+<mat-divider></mat-divider>
+
 <div class="pantalla">
-    <mat-tab-group>
-        <mat-tab>
-          <ng-template mat-tab-label>
-            Datos Personales
-          </ng-template>
-          <h1>Datos personales</h1>
-          <p>uijaaaa</p>
-        </mat-tab>
+
+    <div class="contenedorFoto">
+
+        <mat-card>
+            <mat-card-header>
+              <mat-card-title>Walter Blanco</mat-card-title>
+              <mat-card-subtitle>30001823</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="https://www.concierto.cl/wp-content/uploads/2016/12/walter_white_mcenroe.jpg">
+            <mat-card-content>
+                <button mat-button><i class="material-icons-outlined icono">camera_alt</i> CAMBIAR FOTO</button>
+                <button mat-button><i class="material-icons-outlined icono">https</i> CAMBIAR CONTRASEÑA</button>
+                <button mat-button><i class="material-icons-outlined icono">mail</i> AGREGAR CORREO</button>
+
+
+            </mat-card-content>
+
+          </mat-card>
+
+    </div>
     
-        <mat-tab>
-          <ng-template mat-tab-label>
-            <mat-icon>thumb_down</mat-icon> The worst sushi
-          </ng-template>
-          <h1>Terrible sushi restaurants</h1>
-          <p>...</p>
-        </mat-tab>
+    <div class="contenedorDatos">
+
+        <mat-tab-group>
+
+            <mat-tab>
+              <ng-template mat-tab-label> PERFIL </ng-template>
+
+              <div class="contenedorBloques">
+
+                  <div class="bloque">
+                      <mat-form-field class="itemFormulario" >
+                          <input matInput placeholder="Nombre" value="Walter Roberto">
+                      </mat-form-field>
+
+                      <mat-form-field class="itemFormulario" >
+                          <input matInput placeholder="Apellido" value="Blanco">
+                      </mat-form-field>
+
+                      <mat-form-field class="itemFormulario" >
+                          <input matInput placeholder="DNI" value="30001823">
+                      </mat-form-field>
+
+                      <mat-form-field class="itemFormulario" >
+                          <mat-select placeholder="Sexo" value="Masculino">
+                              <mat-option value="Femenino">Femenino</mat-option>
+                              <mat-option value="Masculino">Masculino</mat-option>
+                              <mat-option value="Otro">Otro</mat-option>
+                            </mat-select>                  
+                      </mat-form-field>
+
+                      <mat-form-field class="itemFormulario" >
+                          <input matInput placeholder="Legajo" value="45698/3">
+                      </mat-form-field>
+
+                  </div>
+
+                  <div class="bloque">
+
+                      <mat-form-field class="itemFormulario" >
+                          <input matInput placeholder="Correo electrónico" value="walter.blanco@econo.unlp.edu.ar">
+                      </mat-form-field>
+
+                      <mat-form-field class="itemFormulario" >
+                          <input matInput placeholder="Correo electrónico" value="lllwalterlll@gmail.com">
+                          <button type="button" matSuffix mat-icon-button matTooltip="Eliminar Correo">
+                              <mat-icon>delete_outline</mat-icon>
+                          </button>
+                      </mat-form-field>
+
+                  </div>
+
+              </div>
+
+
+
+              
+            </mat-tab>
+
+            <mat-tab>
+                <ng-template mat-tab-label> AVANZADO </ng-template>
+
+                <div class="contenedorBloques">
+
+                    <div class="bloque">
+
+                        <mat-form-field class="itemFormulario" >
+                            <input matInput [matDatepicker]="picker" class="inputFecha" placeholder="Fecha Nacimiento" >
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>                          
+                        </mat-form-field>
+
+                        <mat-form-field class="itemFormulario" >
+                            <input matInput placeholder="Nacionalidad" value="Argentino">
+                        </mat-form-field>
+  
+                        <mat-form-field class="itemFormulario" >
+                            <input matInput placeholder="Ciudad de Nacimiento" value="General Paz - Ranchos - Bs As">
+                        </mat-form-field>
+  
+                        <mat-form-field class="itemFormulario" >
+                            <input matInput placeholder="Ciudad de Residencia" value="La Plata">
+                        </mat-form-field>
+  
+                        <mat-form-field class="itemFormulario" >
+                            <input matInput placeholder="Dirección" value="48 Nº 681 - 2B">
+                        </mat-form-field>
+  
+                    </div>
+  
+                    <div class="bloque">
+
+                        <mat-form-field class="itemFormulario" >
+                            <input matInput placeholder="Celular" value="2215032505">
+                        </mat-form-field>
+  
+                        <mat-form-field class="itemFormulario" >
+                            <input matInput placeholder="Teléfono Fijo" value="2214569872">
+                        </mat-form-field>
+
+                        <mat-form-field class="itemFormulario" >
+                            <input matInput placeholder="Facebook" value="facebook.com/walterblanco">
+                        </mat-form-field>
+
+                        <mat-form-field class="itemFormulario" >
+                            <input matInput placeholder="Instagram" value="instagram.com/lllwalterlll">
+                        </mat-form-field>
+
+                        <mat-form-field class="itemFormulario" >
+                            <input matInput placeholder="Twitter" value="twitter.com/lllwalterlll">
+                        </mat-form-field>
+  
+                    </div>
+  
+                </div>
+                
+            </mat-tab>
+
+            <mat-tab>
+                <ng-template mat-tab-label> INSERCIÓN LABORAL </ng-template>
+
+                <div class="contenedorBloques">
+
+                    <div class="bloque">
+
+                        <mat-form-field class="itemFormulario" >
+                            <mat-select placeholder="Carrera" >
+                                <mat-option value="contador">Contador Público</mat-option>
+                                <mat-option value="administracion">Licenciatura en Administración</mat-option>
+                                <mat-option value="turismo">Licenciatura en Turismo</mat-option>
+                                <mat-option value="economia">Licenciatura en Economía</mat-option>
+                                <mat-option value="economia">Tecnicatura en Coopetativas</mat-option>
+                              </mat-select>                  
+                        </mat-form-field>
+
+                        <mat-form-field class="itemFormulario" >
+                            <mat-select placeholder="Graduado">
+                                <mat-option value="si">Si</mat-option>
+                                <mat-option value="no">No</mat-option>
+                              </mat-select>                  
+                        </mat-form-field>
+
+                        <div class="contenedorMaterias">
+                            <mat-form-field class="itemMaterias" >
+                                <input matInput placeholder="Materias Aprobadas" value="34">
+                            </mat-form-field>
+      
+                            <mat-form-field class="itemMedio" >
+                                <input matInput placeholder="Promedio S/A" value="7.40">
+                            </mat-form-field>
+      
+                            <mat-form-field class="itemMedio" >
+                                <input matInput placeholder="Promedio C/A" value="6.50">
+                            </mat-form-field>
+
+                        </div>
+
+                        <mat-form-field class="itemFormulario" >
+                            <mat-select placeholder="Experiencia Laboral">
+                                <mat-option value="si">Si</mat-option>
+                                <mat-option value="no">No</mat-option>
+                              </mat-select>                  
+                        </mat-form-field>
+
+                        <mat-form-field class="itemFormulario" >
+                            <mat-select placeholder="Disponibilidad para viajar">
+                                <mat-option value="si">Si</mat-option>
+                                <mat-option value="no">No</mat-option>
+                              </mat-select>                  
+                        </mat-form-field>
+
+
+
+  
+                    </div>
+  
+                    <div class="bloque">
+
+                        <div class="contenedorIdiomas">
+
+                            
+                            <mat-form-field class="itemIdioma" >
+                                <mat-select placeholder="Idioma">
+                                    <mat-option value="ingles">Inglés</mat-option>
+                                    <mat-option value="portugues">Portugués</mat-option>
+                                    <mat-option value="aleman">Alemán</mat-option>
+                                    <mat-option value="ruso">Ruso</mat-option>
+                                    <mat-option value="italiano">Italiano</mat-option>
+                                    <mat-option value="frances">Fránces</mat-option>
+                                    <mat-option value="chino">Chino</mat-option>
+                                    <mat-option value="japones">Japones</mat-option>
+                                  </mat-select>                  
+                            </mat-form-field>
+                            
+
+                            <mat-form-field class="itemIdioma" >
+                                <mat-select placeholder="Nivel">
+                                    <mat-option value="basico">Básico</mat-option>
+                                    <mat-option value="intermedio">Intermedio</mat-option>
+                                    <mat-option value="avanzados">Avanzado</mat-option>
+
+                                  </mat-select>                  
+                            </mat-form-field>
+
+                        </div>
+
+                        <div class="contenedorIdiomas">
+
+                            
+                            <mat-form-field class="itemIdioma" >
+                                <mat-select placeholder="Idioma">
+                                    <mat-option value="ingles">Inglés</mat-option>
+                                    <mat-option value="portugues">Portugués</mat-option>
+                                    <mat-option value="aleman">Alemán</mat-option>
+                                    <mat-option value="ruso">Ruso</mat-option>
+                                    <mat-option value="italiano">Italiano</mat-option>
+                                    <mat-option value="frances">Fránces</mat-option>
+                                    <mat-option value="chino">Chino</mat-option>
+                                    <mat-option value="japones">Japones</mat-option>
+                                  </mat-select>                  
+                            </mat-form-field>
+                            
+
+                            <mat-form-field class="itemIdioma" >
+                                <mat-select placeholder="Nivel">
+                                    <mat-option value="basico">Básico</mat-option>
+                                    <mat-option value="intermedio">Intermedio</mat-option>
+                                    <mat-option value="avanzados">Avanzado</mat-option>
+
+                                  </mat-select>                  
+                            </mat-form-field>
+
+                        </div>
+
+                        <div class="contenedorIdiomas">
+
+                            
+                            <mat-form-field class="itemIdioma" >
+                                <mat-select placeholder="Idioma">
+                                    <mat-option value="ingles">Inglés</mat-option>
+                                    <mat-option value="portugues">Portugués</mat-option>
+                                    <mat-option value="aleman">Alemán</mat-option>
+                                    <mat-option value="ruso">Ruso</mat-option>
+                                    <mat-option value="italiano">Italiano</mat-option>
+                                    <mat-option value="frances">Fránces</mat-option>
+                                    <mat-option value="chino">Chino</mat-option>
+                                    <mat-option value="japones">Japones</mat-option>
+                                  </mat-select>                  
+                            </mat-form-field>
+                            
+
+                            <mat-form-field class="itemIdioma" >
+                                <mat-select placeholder="Nivel">
+                                    <mat-option value="basico">Básico</mat-option>
+                                    <mat-option value="intermedio">Intermedio</mat-option>
+                                    <mat-option value="avanzados">Avanzado</mat-option>
+
+                                  </mat-select>                  
+                            </mat-form-field>
+
+                        </div>
+
+
+
+
+
+                        <mat-form-field class="itemFormulario" >
+                            <input matInput placeholder="Curriculum Vitae">
+                        </mat-form-field>
+
+  
+                    </div>
+  
+                </div>
+               
+            </mat-tab>
+        
+        </mat-tab-group>
+
+    </div>  
     
-        <mat-tab>
-            <ng-template mat-tab-label>
-              <mat-icon>thumb_down</mat-icon> The worst sushi
-            </ng-template>
-            <h1>Terrible sushi restaurants</h1>
-            <p>...</p>
-        </mat-tab>
-    
-    </mat-tab-group>
+
 </div>
 
