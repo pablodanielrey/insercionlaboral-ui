@@ -95,7 +95,17 @@
 /* -------------------- CONTENIDO --------------------- */
 
 .contenido {
-    padding: 65px 0 0 0;
+    // padding: 65px 0 0 0;
+    // background-color: green;
+    
+    height: calc(100% - 64px);
+    overflow-y:auto;
+    margin-top:64px;
+    @media screen and (max-width: 768px) {
+      height: calc(100% - 56px);
+      overflow-y:auto;
+      margin-top:56px;
+    }
   }
 
 

@@ -6,23 +6,51 @@
 
 <div class="pantalla">
 
-        <mat-card>
+        <div class="contenedorInscripcion">
+
+            <div class="numeros">1</div>
+            
+            <mat-card class="bloque">
+                <mat-card-title>
+                    Actualiza tus Datos	
+                </mat-card-title>
+                <mat-card-subtitle>
+                        Es importante que mantengas tus datos de contacto y educativos actualizados, 
+                        a traves de estos realizaremos las pre-selecciones. <br> 
+                        Para actualizar tu datos ve a:
+                        <b>Menu</b> <b> > <a routerLink="/sistema/mis_datos"> Mis Datos</a></b>.     	
+                </mat-card-subtitle>
                 <mat-card-content>
-                    <b>IMPORTANTE!</b>
-                  <p>
-                    Actualiza tus datos antes de realizar una nueva inscripción. Es importante que mantengas tus datos de contacto y educativos actualizados 
-                    porque a traves de ellos realizaremos las pre-selecciones para nuevas ofertas de trabajo. Para actualizar tu datos anda a <b>Menu</b> > <b><a routerLink="/sistema/mis_datos">Mis Datos</a></b>.     
-
- 
-                  </p>
+                        <a mat-flat-button color="primary" routerLink="/sistema/mis_datos" class="">ACTUALIZAR DATOS</a>
                 </mat-card-content>
-              </mat-card>
 
-        <a mat-flat-button color="primary" routerLink="/sistema/inscripciones/crear" class="btnInscribirme">INSCRIBIRME AHORA</a>
+            </mat-card>
+            
+            <div class="numeros">2</div>
 
-        <div>Mis Inscripciones</div>
+            <mat-card class="bloque">
+                    <mat-card-title>
+                        Inscripción
+                    </mat-card-title>
+                    <mat-card-subtitle>
+                            Todos los alumnos regulares de la Facultad de Ciencias Económicas pueden acceder a una pasantía a través de la Prosecretaría de Inserción Laboral.     	
+                    </mat-card-subtitle>
+                    <mat-card-content>
+                            <a mat-flat-button color="primary" routerLink="/sistema/inscripciones/crear" class="">INSCRIBIRME</a>
+                    </mat-card-content>
+    
+                </mat-card>
 
-        <mat-table matSort [dataSource]="inscripciones$ | async" multiTemplateDataRows>
+        </div>
+
+        <mat-divider></mat-divider>
+
+
+        <div class="contenedorTabla mat-elevation-z8">
+
+
+
+        <mat-table matSort [dataSource]="inscripciones$ | async" multiTemplateDataRows >
         
             <ng-container matColumnDef="oferta" >
                 <mat-header-cell mat-sort-header *matHeaderCellDef > Oferta </mat-header-cell>
@@ -56,5 +84,7 @@
             <mat-row *matRowDef="let row; columns: columnas();"></mat-row>        
         
         </mat-table>
+
+        </div>
 
 </div>

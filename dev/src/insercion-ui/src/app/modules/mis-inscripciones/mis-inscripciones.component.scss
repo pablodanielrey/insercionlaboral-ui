@@ -8,11 +8,32 @@
       font-size: 12px;
     }
   }
-    
+
+  
+.contenedorInscripcion {
+  // width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.bloque {
+  width: 450px;
+}
+
+.numeros {
+  font-size: 150px;
+  opacity: .2;
+}
 
 .btnInscribirme {
     padding: 10px 30px 10px 30px;
     margin: 20px 0 20px 0;
+}
+
+.contenedorTabla {
+  margin-top: 40px;
 }
 
 a {

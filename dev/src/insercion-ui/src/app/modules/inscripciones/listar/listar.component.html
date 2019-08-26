@@ -1,4 +1,154 @@
 <div class="pantalla">
-    Este lo usa insercion laboral para la lista de inscripciones a generar ofertas
+
+    <mat-toolbar class="toolbar">Inscripciones</mat-toolbar>
+
+    <div class="contenedorTabla mat-elevation-z8">
+
+
+        <mat-table class="tabla" matSort [dataSource]="inscripciones_filtradas$ | async" multiTemplateDataRows>
+
+            <ng-container matColumnDef="select" >
+                <mat-header-cell *matHeaderCellDef >                            
+                    <mat-checkbox></mat-checkbox>
+                </mat-header-cell>
+                <mat-cell *matCellDef="let n" > 
+                    <mat-checkbox (click)="$event.stopPropagation()"
+                                (change)="$event ? selection.toggle(n) : null"
+                                [checked]="selection.isSelected(n)">
+                    </mat-checkbox>
+                </mat-cell>  
+            </ng-container>
+        
+            <ng-container matColumnDef="fecha" >
+                <mat-header-cell mat-sort-header *matHeaderCellDef > Fecha Inscripción </mat-header-cell>
+                <mat-cell *matCellDef="let n" > 
+                    {{n.fecha_inscripcion | date: 'dd/MM/yyyy'}}
+                </mat-cell>  
+            </ng-container>
+
+            <ng-container matColumnDef="postulante" sticky>
+                    <mat-header-cell mat-sort-header *matHeaderCellDef > Postulante </mat-header-cell>
+                    <mat-cell *matCellDef="let n" > 
+                        {{n.apellido}} {{n.nombre}} 
+                    </mat-cell>  
+            </ng-container>
+
+            <ng-container matColumnDef="carrera" >
+                    <mat-header-cell mat-sort-header *matHeaderCellDef > Carrera </mat-header-cell>
+                    <mat-cell *matCellDef="let n" > 
+                        {{n.carrera}}
+                    </mat-cell>  
+            </ng-container>
+        
+            <ng-container matColumnDef="oferta" >
+                    <mat-header-cell mat-sort-header *matHeaderCellDef > Oferta </mat-header-cell>
+                    <mat-cell *matCellDef="let n" > 
+                        {{n.oferta}}
+                    </mat-cell>  
+            </ng-container>
+
+            <ng-container matColumnDef="materias" >
+                    <mat-header-cell mat-sort-header *matHeaderCellDef > Materias </mat-header-cell>
+                    <mat-cell *matCellDef="let n" > 
+                        {{n.materias}}
+                    </mat-cell>  
+            </ng-container>
+
+            <ng-container matColumnDef="promedio" >
+                    <mat-header-cell mat-sort-header *matHeaderCellDef > Promedio </mat-header-cell>
+                    <mat-cell *matCellDef="let n" > 
+                        {{n.promedio}}
+                    </mat-cell>  
+            </ng-container>
+
+            <ng-container matColumnDef="edad" >
+                    <mat-header-cell mat-sort-header *matHeaderCellDef > Edad </mat-header-cell>
+                    <mat-cell *matCellDef="let n" > 
+                        {{n.edad}}
+                    </mat-cell>  
+            </ng-container>
+
+            <ng-container matColumnDef="residencia" >
+                    <mat-header-cell mat-sort-header *matHeaderCellDef > Residencia </mat-header-cell>
+                    <mat-cell *matCellDef="let n" > 
+                        {{n.residencia}}
+                    </mat-cell>  
+            </ng-container>
+
+            <ng-container matColumnDef="experiencia" >
+                    <mat-header-cell mat-sort-header *matHeaderCellDef > Experiencia </mat-header-cell>
+                    <mat-cell *matCellDef="let n" > 
+                        {{n.experiencia}}
+                    </mat-cell>  
+            </ng-container>
+
+
+            <ng-container matColumnDef="acciones" stickyEnd>
+                    <mat-header-cell *matHeaderCellDef > Acciones </mat-header-cell>
+                    <mat-cell *matCellDef="let n" > 
+                        <button mat-icon-button matTooltip="Cantidad de Envios" matTooltipPosition="left"><mat-icon>filter_{{n.envios}}</mat-icon></button>
+                        <button mat-icon-button matTooltip="Perfil" matTooltipPosition="left"><mat-icon>zoom_in</mat-icon></button>
+                        <button mat-icon-button matTooltip="Curriculum Vitae" matTooltipPosition="left"><mat-icon>attach_file</mat-icon></button>
+                        <button mat-icon-button matTooltip="Eliminar Inscripción" matTooltipPosition="left" (click)="eliminar(inscripcion)"><mat-icon>delete_outline</mat-icon></button>
+                    </mat-cell>  
+            </ng-container>
+        
+            <mat-header-row *matHeaderRowDef="columnas(); sticky: true"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: columnas();"></mat-row>        
+        
+        </mat-table>
+
+    </div>
+
+
+    <!-- <mat-table matSort [dataSource]="selection.selected" multiTemplateDataRows>
+
+            <ng-container matColumnDef="select" >
+                    <mat-header-cell *matHeaderCellDef >                            
+                         <mat-checkbox></mat-checkbox>
+                    </mat-header-cell>
+                    <mat-cell *matCellDef="let n" > 
+                       <mat-checkbox (click)="$event.stopPropagation()"
+                                      (change)="$event ? selection.toggle(n) : null"
+                                      [checked]="selection.isSelected(n)">
+                        </mat-checkbox>
+
+                    </mat-cell>  
+                </ng-container>
+        
+        
+        <ng-container matColumnDef="oferta" >
+            <mat-header-cell mat-sort-header *matHeaderCellDef > Oferta </mat-header-cell>
+            <mat-cell *matCellDef="let n" > 
+                {{n.nombre}} {{n.apellido}}
+            </mat-cell>  
+        </ng-container>
+    
+        <ng-container matColumnDef="fecha" >
+            <mat-header-cell *matHeaderCellDef > Fecha </mat-header-cell>
+            <mat-cell *matCellDef="let n" > 
+                {{n.fecha_inscripcion | date: 'dd/MM/yyyy'}}
+            </mat-cell>  
+        </ng-container>
+    
+        <ng-container matColumnDef="carrera" >
+                <mat-header-cell mat-sort-header *matHeaderCellDef > Carrera </mat-header-cell>
+                <mat-cell *matCellDef="let n" > 
+                    {{n.carrera}}
+                </mat-cell>  
+        </ng-container>
+
+        <ng-container matColumnDef="acciones" >
+                <mat-header-cell mat-sort-header *matHeaderCellDef > Acciones </mat-header-cell>
+                <mat-cell *matCellDef="let n" > 
+                       <button mat-icon-button (click)="eliminar(inscripcion)"><mat-icon>delete_outline</mat-icon></button>
+                </mat-cell>  
+        </ng-container>
+    
+        <mat-header-row *matHeaderRowDef="columnas()"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: columnas();"></mat-row>        
+    
+    </mat-table> -->
+    
 </div>
 
