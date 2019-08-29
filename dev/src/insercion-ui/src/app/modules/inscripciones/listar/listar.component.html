@@ -1,6 +1,18 @@
 <div class="pantalla">
 
-    <mat-toolbar class="toolbar">Inscripciones</mat-toolbar>
+    <mat-toolbar class="toolbar">
+        <div class="subBloqueHeader">
+            <div>Inscripciones</div>
+            <div>   
+                <button mat-raised-button matTooltip="Filtros" matTooltipPosition="right" class="btnFiltros"><mat-icon>tune</mat-icon></button>
+            </div>
+        </div>
+        <div class="subBloqueHeader"> 
+                <button mat-raised-button matTooltip="Postulantes seleccionados" matTooltipPosition="left" class="btnFiltros">3 Postulantes seleccionados </button>
+                <button mat-raised-button color="primary" matTooltip="Enviar Postulantes" matTooltipPosition="left" class="btnFiltros">ENVIAR</button>
+
+        </div>
+    </mat-toolbar>
 
     <div class="contenedorTabla mat-elevation-z8">
 
@@ -86,6 +98,7 @@
             <ng-container matColumnDef="acciones" stickyEnd>
                     <mat-header-cell *matHeaderCellDef > Acciones </mat-header-cell>
                     <mat-cell *matCellDef="let n" > 
+                        <button mat-icon-button matTooltip="Seleccionar postulante" matTooltipPosition="left"><mat-icon>add_circle_outline</mat-icon></button>
                         <button mat-icon-button matTooltip="Cantidad de Envios" matTooltipPosition="left"><mat-icon>filter_{{n.envios}}</mat-icon></button>
                         <button mat-icon-button matTooltip="Perfil" matTooltipPosition="left"><mat-icon>zoom_in</mat-icon></button>
                         <button mat-icon-button matTooltip="Curriculum Vitae" matTooltipPosition="left"><mat-icon>attach_file</mat-icon></button>

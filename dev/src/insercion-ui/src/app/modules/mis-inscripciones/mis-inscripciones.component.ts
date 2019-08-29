@@ -12,7 +12,7 @@ export class MisInscripcionesComponent implements OnInit {
 
   inscripciones$: Observable<any>;
 
-  _columnas = ['fecha','oferta','carrera','acciones']
+  _columnas = ['fecha','oferta','acciones']
 
   columnas() {
     return this._columnas;

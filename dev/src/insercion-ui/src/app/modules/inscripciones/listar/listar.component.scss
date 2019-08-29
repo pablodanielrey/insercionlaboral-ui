@@ -7,7 +7,19 @@
 }
 
 .toolbar {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 20px;
+}
+
+.subBloqueHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnFiltros {
+    margin-left: 20px;
 }
 
 .contenedorTabla {

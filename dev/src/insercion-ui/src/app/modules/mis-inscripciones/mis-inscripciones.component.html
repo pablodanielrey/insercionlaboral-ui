@@ -8,29 +8,25 @@
 
         <div class="contenedorInscripcion">
 
-            <div class="numeros">1</div>
-            
+          
             <mat-card class="bloque">
                 <mat-card-title>
-                    Actualiza tus Datos	
+                    1 | Actualizá tus Datos	
                 </mat-card-title>
                 <mat-card-subtitle>
-                        Es importante que mantengas tus datos de contacto y educativos actualizados, 
-                        a traves de estos realizaremos las pre-selecciones. <br> 
-                        Para actualizar tu datos ve a:
-                        <b>Menu</b> <b> > <a routerLink="/sistema/mis_datos"> Mis Datos</a></b>.     	
+                    Es importante que mantengas tus datos de contacto y educativos actualizados, 
+                    a traves de estos realizaremos las pre-selecciones. <br> Para actualizar tu datos ve a:
+                    <b>Menu</b> <b> > <a routerLink="/sistema/mis_datos"> Mis Datos</a></b>. 
                 </mat-card-subtitle>
                 <mat-card-content>
-                        <a mat-flat-button color="primary" routerLink="/sistema/mis_datos" class="">ACTUALIZAR DATOS</a>
+                    <a mat-flat-button color="primary" routerLink="/sistema/mis_datos" class="">ACTUALIZAR</a>
                 </mat-card-content>
-
             </mat-card>
             
-            <div class="numeros">2</div>
 
             <mat-card class="bloque">
                     <mat-card-title>
-                        Inscripción
+                       2 | Inscribite
                     </mat-card-title>
                     <mat-card-subtitle>
                             Todos los alumnos regulares de la Facultad de Ciencias Económicas pueden acceder a una pasantía a través de la Prosecretaría de Inserción Laboral.     	
@@ -38,8 +34,7 @@
                     <mat-card-content>
                             <a mat-flat-button color="primary" routerLink="/sistema/inscripciones/crear" class="">INSCRIBIRME</a>
                     </mat-card-content>
-    
-                </mat-card>
+            </mat-card>
 
         </div>
 
@@ -51,28 +46,21 @@
 
 
         <mat-table matSort [dataSource]="inscripciones$ | async" multiTemplateDataRows >
-        
-            <ng-container matColumnDef="oferta" >
-                <mat-header-cell mat-sort-header *matHeaderCellDef > Oferta </mat-header-cell>
-                <mat-cell *matCellDef="let n" > 
-                    {{n}}
-                </mat-cell>  
-            </ng-container>
-        
+
             <ng-container matColumnDef="fecha" >
                 <mat-header-cell *matHeaderCellDef > Fecha </mat-header-cell>
                 <mat-cell *matCellDef="let n" > 
-                    {{n.fecha | date: 'dd/MM/yyyy'}}
+                    {{n.fecha_inscripcion | date: 'dd/MM/yyyy'}}
+                </mat-cell>  
+                </ng-container>
+        
+            <ng-container matColumnDef="oferta" >
+                <mat-header-cell mat-sort-header *matHeaderCellDef > Inscripto en </mat-header-cell>
+                <mat-cell *matCellDef="let n" > 
+                    {{n.oferta}}
                 </mat-cell>  
             </ng-container>
-        
-            <ng-container matColumnDef="carrera" >
-                    <mat-header-cell mat-sort-header *matHeaderCellDef > Carrera </mat-header-cell>
-                    <mat-cell *matCellDef="let n" > 
-                        {{n}}
-                    </mat-cell>  
-            </ng-container>
-
+ 
             <ng-container matColumnDef="acciones" >
                     <mat-header-cell mat-sort-header *matHeaderCellDef > Acciones </mat-header-cell>
                     <mat-cell *matCellDef="let n" > 
