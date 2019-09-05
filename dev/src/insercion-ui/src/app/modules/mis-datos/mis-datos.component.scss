@@ -2,6 +2,11 @@
       padding: 20px;
       display: flex;
       flex-direction: row;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        padding: 0px;
+
+      }
   }
 
 .ruta {
@@ -15,6 +20,10 @@
   .contenedorFoto {
       width: 25%;
       margin-right: 40px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin: 0 0 20px 0;
+     }
   }
 
   .icono {
@@ -28,12 +37,20 @@
 
   .contenedorBloques {
       display: flex;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        padding: 20px;
+    }
     
   }
 
 .bloque {
     width: 40%;
     padding: 20px;
+    @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0px;
+    }
 }
 
   .itemFormulario {
