@@ -1,8 +1,3 @@
-<!-- <mat-toolbar-row>
-        <span class="ruta">&nbsp; Inscripción</span>
-</mat-toolbar-row>
-
-<mat-divider></mat-divider> -->
 
 <div class="pantalla">
 
@@ -15,42 +10,34 @@
         </div>
     </div>
 
-
-
-
-
-        <div class="contenedorTabla mat-elevation-z8">
-
-
-
+    <div class="tituloInscripciones">
+        <i class="material-icons"> arrow_downward </i> Mis Inscripciones
+    </div>
+     
+    <div class="contenedorTabla mat-elevation-z8">
+ 
         <mat-table matSort [dataSource]="inscripciones$ | async" multiTemplateDataRows >
 
             <ng-container matColumnDef="fecha" >
                 <mat-header-cell *matHeaderCellDef > Fecha </mat-header-cell>
-                <mat-cell *matCellDef="let n" > 
-                    {{n.fecha_inscripcion | date: 'dd/MM/yyyy'}}
-                </mat-cell>  
-                </ng-container>
-        
+                <mat-cell *matCellDef="let n" > {{n.fecha_inscripcion | date: 'dd/MM/yyyy'}}</mat-cell>  
+            </ng-container>
+            
             <ng-container matColumnDef="oferta" >
                 <mat-header-cell mat-sort-header *matHeaderCellDef > Inscripto en </mat-header-cell>
-                <mat-cell *matCellDef="let n" > 
-                    {{n.oferta}}
-                </mat-cell>  
+                <mat-cell *matCellDef="let n" > {{n.oferta}} </mat-cell>  
             </ng-container>
- 
+    
             <ng-container matColumnDef="acciones" >
-                    <mat-header-cell mat-sort-header *matHeaderCellDef > Acciones </mat-header-cell>
-                    <mat-cell *matCellDef="let n" > 
-                           <button mat-icon-button (click)="eliminar(inscripcion)"><mat-icon>delete_outline</mat-icon></button>
-                    </mat-cell>  
-            </ng-container>
-        
+                <mat-header-cell mat-sort-header *matHeaderCellDef > Acciones </mat-header-cell>
+                <mat-cell *matCellDef="let n" ><button mat-icon-button (click)="eliminar(inscripcion)"><mat-icon>delete_outline</mat-icon></button></mat-cell>  
+                </ng-container>
+            
             <mat-header-row *matHeaderRowDef="columnas()"></mat-header-row>
             <mat-row *matRowDef="let row; columns: columnas();"></mat-row>        
-        
+            
         </mat-table>
 
-        </div>
+    </div>
 
 </div>

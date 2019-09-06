@@ -1,27 +1,30 @@
 .pantalla {
-    // padding: 20px;
 }
 
+.inscripcion {
+  display: flex;
+  align-items: center;
+  background-image: url("/assets/img/fondoinscripcion2.jpg");
+  min-height: 250px;
+  padding: 40px;
+}
 
-
-
-  .inscripcion {
-    display: flex;
-    align-items: center;
-    background-image: url("/assets/img/fondoinscripcion2.jpg");
-    min-height: 250px;
-    padding: 40px;
-  }
-
-  .bajada {
-    font-size: 16px;
-    margin-top: 10px;
-    color: white;
-    font-weight: 300;
-  }
+.contenedorInscripcion {
+  // width: 70%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
 
 .titulo {
   font-size: 30px;
+  color: white;
+  font-weight: 300;
+}
+
+.bajada {
+  font-size: 16px;
+  margin-top: 10px;
   color: white;
   font-weight: 300;
 }
@@ -30,27 +33,18 @@
   margin-top: 20px;
   padding: 10px 40px 10px 40px;
 }
-  
-.contenedorInscripcion {
-  // width: 70%;
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
+
+.tituloInscripciones {
+  margin: 20px 0 20px 40px;
+  @media screen and (max-width: 768px) {
+    margin: 20px 0 20px 20px;
+  }
 }
-
-
-
 
 .contenedorTabla {
-  padding: 20px;
-  margin-top: 40px;
+  margin: 0 40px 40px 40px;
+  @media screen and (max-width: 768px) {
+    margin: 0 20px 20px 20px;
+  }
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-a:hover {
-        color: #eb3740;
-}
