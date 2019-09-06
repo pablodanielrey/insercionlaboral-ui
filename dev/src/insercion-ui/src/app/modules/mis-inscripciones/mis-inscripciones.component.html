@@ -1,44 +1,22 @@
-<mat-toolbar-row>
+<!-- <mat-toolbar-row>
         <span class="ruta">&nbsp; Inscripción</span>
 </mat-toolbar-row>
 
-<mat-divider></mat-divider>
+<mat-divider></mat-divider> -->
 
 <div class="pantalla">
 
-        <div class="contenedorInscripcion">
-
-          
-            <mat-card class="bloque">
-                <mat-card-title>
-                    1 | Actualizá tus Datos	
-                </mat-card-title>
-                <mat-card-subtitle>
-                    Es importante que mantengas tus datos de contacto y educativos actualizados, 
-                    a traves de estos realizaremos las pre-selecciones. <br> Para actualizar tu datos ve a:
-                    <b>Menu</b> <b> > <a routerLink="/sistema/mis_datos"> Mis Datos</a></b>. 
-                </mat-card-subtitle>
-                <mat-card-content>
-                    <a mat-flat-button color="primary" routerLink="/sistema/mis_datos" class="">ACTUALIZAR</a>
-                </mat-card-content>
-            </mat-card>
-            
-
-            <mat-card class="bloque">
-                    <mat-card-title>
-                       2 | Inscribite
-                    </mat-card-title>
-                    <mat-card-subtitle>
-                            Todos los alumnos regulares de la Facultad de Ciencias Económicas pueden acceder a una pasantía a través de la Prosecretaría de Inserción Laboral.     	
-                    </mat-card-subtitle>
-                    <mat-card-content>
-                            <a mat-flat-button color="primary" routerLink="/sistema/inscripciones/crear" class="">INSCRIBIRME</a>
-                    </mat-card-content>
-            </mat-card>
+    <div class="inscripcion">
+        <div class="contenidoInscripcion">
+            <div class="titulo">Sistema de Pasantías Educativas para Alumnos  </div>
+            <div class="bajada">Todos los alumnos regulares de la Facultad de Ciencias Económicas <br> pueden acceder a una pasantía a través de la Prosecretaría de Inserción Laboral.</div>
+            <button mat-raised-button routerLink="/sistema/inscripciones/crear" class="btnIscripcion">INSCRIBIRME</button>
 
         </div>
+    </div>
 
-        <mat-divider></mat-divider>
+
+
 
 
         <div class="contenedorTabla mat-elevation-z8">

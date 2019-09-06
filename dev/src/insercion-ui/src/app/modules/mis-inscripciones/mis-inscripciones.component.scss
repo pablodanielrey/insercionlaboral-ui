@@ -1,14 +1,35 @@
 .pantalla {
-    padding: 20px;
+    // padding: 20px;
 }
 
-.ruta {
-    opacity: .5;
-    @media screen and (max-width: 768px) {
-      font-size: 12px;
-    }
+
+
+
+  .inscripcion {
+    display: flex;
+    align-items: center;
+    background-image: url("/assets/img/fondoinscripcion2.jpg");
+    min-height: 250px;
+    padding: 40px;
   }
 
+  .bajada {
+    font-size: 16px;
+    margin-top: 10px;
+    color: white;
+    font-weight: 300;
+  }
+
+.titulo {
+  font-size: 30px;
+  color: white;
+  font-weight: 300;
+}
+
+.btnIscripcion {
+  margin-top: 20px;
+  padding: 10px 40px 10px 40px;
+}
   
 .contenedorInscripcion {
   // width: 70%;
@@ -17,18 +38,12 @@
   margin-bottom: 40px;
 }
 
-.bloque {
-  width: 450px;
-  margin-right: 40px;
-  background-color: #eb3740;
-}
-
 
 
 
 .contenedorTabla {
+  padding: 20px;
   margin-top: 40px;
-  width: 1000px;
 }
 
 a {
