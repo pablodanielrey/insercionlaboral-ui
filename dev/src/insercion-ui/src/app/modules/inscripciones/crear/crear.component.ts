@@ -12,4 +12,8 @@ export class CrearComponent implements OnInit {
   ngOnInit() {
   }
 
+  volver() {
+    
+  }
+
 }
