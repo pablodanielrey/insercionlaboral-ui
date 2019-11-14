@@ -1,0 +1,98 @@
+{
+  "configVersion": 1,
+  "timestamp": 1573763585179,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main-es2015.362a8fd786177682fe64.js",
+        "/main-es5.1dbf0230c19de329e363.js",
+        "/polyfills-es2015.5728f680576ca47e99fe.js",
+        "/polyfills-es5.3c7a89c465e3c36435bf.js",
+        "/runtime-es2015.858f8dd898b75fe86926.js",
+        "/runtime-es5.741402d1d47331ce975c.js",
+        "/styles.cadcf168a1b96838f923.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/img/fce/fondo.jpg",
+        "/assets/img/fce/fondofce.jpg",
+        "/assets/img/fce/logo.png",
+        "/assets/img/fce/logofce2018.png",
+        "/assets/img/fondoinscripcion.jpg",
+        "/assets/img/fondoinscripcion2.jpg",
+        "/assets/img/menu.png",
+        "/assets/img/presi/fondo.jpg",
+        "/assets/img/presi/logo.png",
+        "/assets/themes/themeFCE.scss"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/icons/icon-128x128.png": "e4b23f19fd2719009ebf07af582b1f5b893dbcfe",
+    "/assets/icons/icon-144x144.png": "69d22e7f9ddfa15ca5ade169ef94f2a8d6778084",
+    "/assets/icons/icon-152x152.png": "4df7323372b3941aae6057f0f7c770ec7fe04cb1",
+    "/assets/icons/icon-192x192.png": "9b597617d5f635f2860d3e2428816fd4ce0fb207",
+    "/assets/icons/icon-384x384.png": "4e230026306a65b07e63e7abd53aece1bc3a40c2",
+    "/assets/icons/icon-512x512.png": "434befd6e841f1cedab0188bbb17d29f2bb95013",
+    "/assets/icons/icon-72x72.png": "0c5205e0050fa9084f8bd6d86f3ca4f6786633a6",
+    "/assets/icons/icon-96x96.png": "3fde46b86d4d06fc8379c4b883abdbce810a1048",
+    "/assets/img/fce/fondo.jpg": "2485671dfb26b3083e7fc7c87e11a8b56cc3625c",
+    "/assets/img/fce/fondofce.jpg": "9a20ce516a160e407ea99ac152af25d23d8e59db",
+    "/assets/img/fce/logo.png": "0f3e38ebf8ff4f9b44f633bf89247e0bc2288a9d",
+    "/assets/img/fce/logofce2018.png": "3f56ada7286e15fd7c68413e2832fd7681ec296a",
+    "/assets/img/fondoinscripcion.jpg": "73c45e9995277b77e811fa6628d30a392b3e4615",
+    "/assets/img/fondoinscripcion2.jpg": "9c5edf279000b6340bc41298866dd5000c1a34e7",
+    "/assets/img/menu.png": "c950635551363de98a2bd868a11d481879f9e6fa",
+    "/assets/img/presi/fondo.jpg": "2485671dfb26b3083e7fc7c87e11a8b56cc3625c",
+    "/assets/img/presi/logo.png": "0f3e38ebf8ff4f9b44f633bf89247e0bc2288a9d",
+    "/assets/themes/themeFCE.scss": "360b06fdf3b85530b9b63572cd02e8423f368632",
+    "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/index.html": "040bf70a920f7762279689a5a958cffee81fb780",
+    "/main-es2015.362a8fd786177682fe64.js": "e6f5ffe763fc397b46f0baa802425e9b81a28547",
+    "/main-es5.1dbf0230c19de329e363.js": "1d7c06c6d3c515ab128d6906b5909036650845fb",
+    "/polyfills-es2015.5728f680576ca47e99fe.js": "77f974dd2b186031cfc4f4526d96db4efcd39353",
+    "/polyfills-es5.3c7a89c465e3c36435bf.js": "d48e6353a252678ba0d8d18a53ac77d13016d6e7",
+    "/runtime-es2015.858f8dd898b75fe86926.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/runtime-es5.741402d1d47331ce975c.js": "b62956c2192bfe5516d6374e753773901ed50ec5",
+    "/styles.cadcf168a1b96838f923.css": "69e9bada8b9b8474097ddc169647c3783f70b9b9"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
