@@ -2,12 +2,44 @@
       padding: 20px;
       display: flex;
       flex-direction: row;
+      -webkit-animation: pantalla .8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+      animation: pantalla .8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
       @media screen and (max-width: 768px) {
         flex-direction: column;
         padding: 0px;
 
       }
   }
+
+ 
+  @-webkit-keyframes pantalla {
+    0% {
+      -webkit-transform: translateZ(80px);
+              transform: translateZ(80px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes pantalla {
+    0% {
+      -webkit-transform: translateZ(80px);
+              transform: translateZ(80px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+
+
+
+  
 
 .ruta {
     opacity: .5;
