@@ -13,6 +13,9 @@ import { MisDatosComponent } from './modules/mis-datos/mis-datos.component';
 import { ListarComponent } from './modules/inscripciones/listar/listar.component';
 import { MisInscripcionesComponent } from './modules/mis-inscripciones/mis-inscripciones.component';
 import { CrearComponent } from './modules/inscripciones/crear/crear.component';
+import { CambiarClaveComponent } from './modules/mis-datos/cambiar-clave/cambiar-clave.component';
+import { AgregarMailComponent } from './modules/mis-datos/agregar-correo/agregar-mail/agregar-mail.component';
+import { ConfirmarCorreoComponent } from './modules/mis-datos/agregar-correo/confirmar-correo/confirmar-correo.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { CrearComponent } from './modules/inscripciones/crear/crear.component';
     MisDatosComponent,
     ListarComponent,
     MisInscripcionesComponent,
-    CrearComponent
+    CrearComponent,
+    CambiarClaveComponent,
+    AgregarMailComponent,
+    ConfirmarCorreoComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,49 @@
+<mat-toolbar-row class="toolbar">
+    <div>
+        <span class="ruta">&nbsp; Cambiar Contraseña </span>
+    </div>
+</mat-toolbar-row>
+    
+<mat-divider></mat-divider>
+    
+<div class="pantalla ">  
+
+    <form class="formulario">
+
+        <mat-form-field>
+                <mat-label>Contraseña Actual</mat-label>
+                <input matInput placeholder="Contraseña Actual" [type]="hide ? 'password' : 'text'">
+                <mat-icon matSuffix class="iconos">lock_open</mat-icon>
+
+                <mat-error>Las contraseñas no coinciden</mat-error> 
+
+        </mat-form-field>
+
+        <mat-form-field>
+                <mat-label>Nueva Contraseña</mat-label>
+                <input matInput placeholder="Nueva Contraseña" [type]="hide ? 'password' : 'text'">
+                <mat-icon matSuffix class="iconos">lock_open</mat-icon>
+
+
+                <mat-error></mat-error> 
+
+        </mat-form-field>
+
+        <mat-form-field>
+                <mat-label>Repetir Contraseña</mat-label>
+                <input matInput placeholder="Repetir Contraseña" [type]="hide ? 'password' : 'text'">
+                <mat-icon matSuffix class="iconos">lock_open</mat-icon>
+
+        </mat-form-field>
+
+        <mat-checkbox (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" class="check">Mostar Contraseñas</mat-checkbox>
+
+
+
+    </form>
+
+    <button mat-flat-button (click)="onClick" color="primary" class="btnGuardar"> GUARDAR CONTRASEÑA</button>
+
+
+
+</div>

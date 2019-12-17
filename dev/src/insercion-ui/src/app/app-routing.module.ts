@@ -10,6 +10,9 @@ import { MisDatosComponent } from './modules/mis-datos/mis-datos.component';
 import { ListarComponent } from './modules/inscripciones/listar/listar.component';
 import { MisInscripcionesComponent } from './modules/mis-inscripciones/mis-inscripciones.component';
 import { CrearComponent } from './modules/inscripciones/crear/crear.component';
+import { CambiarClaveComponent } from './modules/mis-datos/cambiar-clave/cambiar-clave.component';
+import { AgregarMailComponent } from './modules/mis-datos/agregar-correo/agregar-mail/agregar-mail.component';
+import { ConfirmarCorreoComponent } from './modules/mis-datos/agregar-correo/confirmar-correo/confirmar-correo.component';
 
 const routes: Routes = [
 
@@ -23,6 +26,24 @@ const routes: Routes = [
      children: [
       { path: 'inicio', component: InicioComponent },
       { path: 'mis_datos', component: MisDatosComponent },
+      { path: 'mis_datos/cambiar_clave', component: CambiarClaveComponent },
+      { path: 'mis_datos/cambiar_clave', component: CambiarClaveComponent },
+      { path: 'mis_datos/correo/agregar_correo', component: AgregarMailComponent },
+      { path: 'mis_datos/correo/confirmar_correo', component: ConfirmarCorreoComponent },
+
+
+
+      // { path: 'mis_datos', component: MisDatosComponent ,
+      //     children: [
+      //       { path: 'cambiar_clave', component: CambiarClaveComponent },
+      //       { path: 'agregar_correo',
+      //           children: [
+      //             { path: 'agregar_correo', component: AgregarMailComponent },
+      //             { path: 'confirmar_correo', component: ConfirmarCorreoComponent },
+      //           ] 
+      //      }
+      // ]},
+      
       { path: 'mis_inscripciones', component: MisInscripcionesComponent },
       { 
         path: 'inscripciones',
