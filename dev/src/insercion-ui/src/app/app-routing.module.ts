@@ -13,6 +13,7 @@ import { CrearComponent } from './modules/inscripciones/crear/crear.component';
 import { CambiarClaveComponent } from './modules/mis-datos/cambiar-clave/cambiar-clave.component';
 import { AgregarMailComponent } from './modules/mis-datos/agregar-correo/agregar-mail/agregar-mail.component';
 import { ConfirmarCorreoComponent } from './modules/mis-datos/agregar-correo/confirmar-correo/confirmar-correo.component';
+import { PostulantesComponent } from './modules/inscripciones/postulantes/postulantes.component';
 
 const routes: Routes = [
 
@@ -49,7 +50,9 @@ const routes: Routes = [
         path: 'inscripciones',
         children: [
           { path: 'crear', component: CrearComponent },
-          { path: 'listar', component: ListarComponent }
+          { path: 'listar', component: ListarComponent },
+          { path: 'postulantes', component: PostulantesComponent }
+
         ]
       }
      ]

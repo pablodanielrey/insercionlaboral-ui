@@ -1,0 +1,120 @@
+<mat-toolbar-row>
+        <button class="btnVolver" mat-button color="primary" routerLink="/sistema/inscripciones/listar"> <mat-icon>undo </mat-icon> VOLVER </button>
+        <button class="btnVolverCel" mat-icon-button color="primary" routerLink="/sistema/inscripciones/listar"> <mat-icon>undo</mat-icon> </button>
+        <span class="ruta">&nbsp; Postulantes</span>
+    </mat-toolbar-row>
+        
+    <mat-divider></mat-divider>
+        
+    <div class="pantalla ">  
+        
+            <div class="contenedorTabla mat-elevation-z8">
+
+
+                    <mat-table class="tabla" matSort [dataSource]="inscripciones_filtradas$ | async" multiTemplateDataRows>
+            
+                        <ng-container matColumnDef="select" >
+                            <mat-header-cell *matHeaderCellDef >                            
+                                <mat-checkbox></mat-checkbox>
+                            </mat-header-cell>
+                            <mat-cell *matCellDef="let n" > 
+                                <mat-checkbox (click)="$event.stopPropagation()"
+                                            (change)="$event ? selection.toggle(n) : null"
+                                            [checked]="selection.isSelected(n)">
+                                </mat-checkbox>
+                            </mat-cell>  
+                        </ng-container>
+
+                        <ng-container matColumnDef="numero" >
+                                <mat-header-cell mat-sort-header *matHeaderCellDef > Nº </mat-header-cell>
+                                <mat-cell *matCellDef="let n" > 
+                                        {{n.numero}}
+
+                                </mat-cell>  
+                            </ng-container>
+
+
+                    
+                        <ng-container matColumnDef="fecha" >
+                            <mat-header-cell mat-sort-header *matHeaderCellDef > Fecha Inscripción </mat-header-cell>
+                            <mat-cell *matCellDef="let n" > 
+                                {{n.fecha_inscripcion | date: 'dd/MM/yyyy'}}
+                            </mat-cell>  
+                        </ng-container>
+            
+                        <ng-container matColumnDef="postulante" sticky>
+                                <mat-header-cell mat-sort-header *matHeaderCellDef > Postulante </mat-header-cell>
+                                <mat-cell *matCellDef="let n" > 
+                                    {{n.apellido}} {{n.nombre}} 
+                                </mat-cell>  
+                        </ng-container>
+            
+                        <ng-container matColumnDef="carrera" >
+                                <mat-header-cell mat-sort-header *matHeaderCellDef > Carrera </mat-header-cell>
+                                <mat-cell *matCellDef="let n" > 
+                                    {{n.carrera}}
+                                </mat-cell>  
+                        </ng-container>
+                    
+                        <ng-container matColumnDef="oferta" >
+                                <mat-header-cell mat-sort-header *matHeaderCellDef > Oferta </mat-header-cell>
+                                <mat-cell *matCellDef="let n" > 
+                                    {{n.oferta}}
+                                </mat-cell>  
+                        </ng-container>
+            
+                        <ng-container matColumnDef="materias" >
+                                <mat-header-cell mat-sort-header *matHeaderCellDef > Materias </mat-header-cell>
+                                <mat-cell *matCellDef="let n" > 
+                                    {{n.materias}}
+                                </mat-cell>  
+                        </ng-container>
+            
+                        <ng-container matColumnDef="promedio" >
+                                <mat-header-cell mat-sort-header *matHeaderCellDef > Promedio </mat-header-cell>
+                                <mat-cell *matCellDef="let n" > 
+                                    {{n.promedio}}
+                                </mat-cell>  
+                        </ng-container>
+            
+                        <ng-container matColumnDef="edad" >
+                                <mat-header-cell mat-sort-header *matHeaderCellDef > Edad </mat-header-cell>
+                                <mat-cell *matCellDef="let n" > 
+                                    {{n.edad}}
+                                </mat-cell>  
+                        </ng-container>
+            
+                        <ng-container matColumnDef="residencia" >
+                                <mat-header-cell mat-sort-header *matHeaderCellDef > Residencia </mat-header-cell>
+                                <mat-cell *matCellDef="let n" > 
+                                    {{n.residencia}}
+                                </mat-cell>  
+                        </ng-container>
+            
+                        <ng-container matColumnDef="experiencia" >
+                                <mat-header-cell mat-sort-header *matHeaderCellDef > Experiencia </mat-header-cell>
+                                <mat-cell *matCellDef="let n" > 
+                                    {{n.experiencia}}
+                                </mat-cell>  
+                        </ng-container>
+            
+            
+                        <ng-container matColumnDef="acciones" stickyEnd>
+                                <mat-header-cell *matHeaderCellDef > Acciones </mat-header-cell>
+                                <mat-cell *matCellDef="let n" > 
+                                    <button mat-icon-button matTooltip="Perfil" matTooltipPosition="left"><mat-icon>zoom_in</mat-icon></button>
+                                    <button mat-icon-button matTooltip="Curriculum Vitae" matTooltipPosition="left"><mat-icon>attach_file</mat-icon></button>
+                                    <button mat-icon-button matTooltip="Eliminar Inscripción" matTooltipPosition="left" (click)="eliminar(inscripcion)"><mat-icon>delete_outline</mat-icon></button>
+                                </mat-cell>  
+                        </ng-container>
+                    
+                        <mat-header-row *matHeaderRowDef="columnas(); sticky: true"></mat-header-row>
+                        <mat-row *matRowDef="let row; columns: columnas();"></mat-row>        
+                    
+                    </mat-table>
+            
+                </div>
+            
+            
+        
+    </div>
