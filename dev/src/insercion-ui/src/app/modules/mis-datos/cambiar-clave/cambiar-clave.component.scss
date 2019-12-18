@@ -1,26 +1,31 @@
-.toolbar {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .ruta {
-    opacity: .5;
-    @media screen and (max-width: 768px) {
-      font-size: 12px;
-    }
-  }
-
-.pantalla {
-    padding: 20px;
-    
-    -webkit-animation: pantalla .8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation: pantalla .8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    @media screen and (max-width: 768px) {
-
-
-    }
+.btnVolver {
+  display: inline;
+  @media screen and (max-width: 768px) {
+    display: none;
+}
 }
 
+.btnVolverCel {
+  display: none;
+  @media screen and (max-width: 768px) {
+    display: inline;
+}
+}
+
+.ruta {
+  opacity: .5;
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+  
+ 
+.pantalla {
+    padding: 20px;
+    -webkit-animation: pantalla .8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: pantalla .8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+}
 
 @-webkit-keyframes pantalla {
   0% {
@@ -46,6 +51,7 @@
     opacity: 1;
   }
 }
+
 
 .formulario {
     display: flex;

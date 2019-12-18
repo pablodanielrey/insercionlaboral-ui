@@ -1,1 +1,27 @@
-<p>agregar-mail works!</p>
+<mat-toolbar-row>
+    <button class="btnVolver" mat-button color="primary" routerLink="/sistema/mis_datos"> <mat-icon>undo </mat-icon> VOLVER </button>
+    <button class="btnVolverCel" mat-icon-button color="primary" routerLink="/sistema/mis_datos"> <mat-icon>undo</mat-icon> </button>
+    <span class="ruta">&nbsp; Agegar Correo</span>
+</mat-toolbar-row>
+    
+<mat-divider></mat-divider>
+    
+<div class="pantalla ">  
+    
+        <form class="formulario">
+
+                <mat-form-field>
+                        <mat-label>Correo Electrónico </mat-label>
+                        <input matInput placeholder="Correo Electrónico">
+                        <mat-icon matSuffix class="iconos">mail</mat-icon>
+        
+                        <mat-error></mat-error> 
+        
+                </mat-form-field>
+         
+        </form>
+        
+        <button mat-flat-button routerLink="/sistema/mis_datos/correo/confirmar_correo" color="primary" class="btnGuardar"> CONTINUAR</button>
+        
+    
+</div>

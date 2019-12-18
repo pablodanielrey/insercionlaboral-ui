@@ -1,1 +1,34 @@
-<p>confirmar-correo works!</p>
+<mat-toolbar-row>
+        <button class="btnVolver" mat-button color="primary" routerLink="/sistema/mis_datos/correo/agregar_correo"> <mat-icon>undo </mat-icon> VOLVER </button>
+        <button class="btnVolverCel" mat-icon-button color="primary" routerLink="/sistema/mis_datos/correo/agregar_correo"> <mat-icon>undo</mat-icon> </button>
+        <span class="ruta">&nbsp; Confirmar Correo</span>
+    </mat-toolbar-row>
+        
+    <mat-divider></mat-divider>
+        
+    <div class="pantalla ">  
+        
+            <form class="formulario">
+
+                    <p>Te hemos enviado un código de verificación a <b>tucorreo@yucorreo.com</b>, ingresa el código para validar tu correo.</p>
+                    <p class="mensaje">Recuerda revisar la bandeja de correo no deseado (spam), si llegó ahí, márcalo como seguro.</p>
+
+
+                    <mat-form-field>
+                            <mat-label>Código de Verificación </mat-label>
+                            <input matInput placeholder="Código de Verificación">
+                            <mat-icon matSuffix class="iconos">verified_user</mat-icon>
+            
+                            <mat-error></mat-error> 
+            
+                    </mat-form-field>
+             
+            </form>
+
+
+            
+            <button mat-flat-button  color="primary" class="btnGuardar"> CONFIRMAR CORREO</button>
+            <button mat-button>Reenviar código</button>
+
+
+    </div>
