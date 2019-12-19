@@ -19,6 +19,7 @@ import { ConfirmarCorreoComponent } from './modules/mis-datos/agregar-correo/con
 import { PostulantesComponent } from './modules/inscripciones/postulantes/postulantes.component';
 import { CrearSeleccionComponent } from './modules/inscripciones/crear-seleccion/crear-seleccion.component';
 import { ListarSeleccionesComponent } from './modules/selecciones/listar-selecciones/listar-selecciones.component';
+import { DialogoComponent } from './modules/selecciones/listar-selecciones/dialogo.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,11 @@ import { ListarSeleccionesComponent } from './modules/selecciones/listar-selecci
     ConfirmarCorreoComponent,
     PostulantesComponent,
     CrearSeleccionComponent,
-    ListarSeleccionesComponent
+    ListarSeleccionesComponent,
+    DialogoComponent
+  ],
+  entryComponents: [
+    DialogoComponent
   ],
   imports: [
     BrowserModule,

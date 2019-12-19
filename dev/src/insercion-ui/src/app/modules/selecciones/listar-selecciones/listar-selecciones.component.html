@@ -61,7 +61,7 @@
                             <ng-container matColumnDef="acciones" stickyEnd>
                                     <mat-header-cell *matHeaderCellDef > Acciones </mat-header-cell>
                                     <mat-cell *matCellDef="let n" > 
-                                        <button mat-icon-button matTooltip="Compartir" matTooltipPosition="left"><mat-icon>share</mat-icon></button>
+                                        <button mat-icon-button matTooltip="Compartir" matTooltipPosition="left" (click)="openDialog()"><mat-icon>share</mat-icon></button>
                                         <button mat-icon-button matTooltip="Detalle" matTooltipPosition="left"><mat-icon>zoom_in</mat-icon></button>
                                         <button mat-icon-button matTooltip="Eliminar Selección" matTooltipPosition="left" ><mat-icon>delete_outline</mat-icon></button>
                                     </mat-cell>  
