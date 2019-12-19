@@ -14,6 +14,8 @@ import { CambiarClaveComponent } from './modules/mis-datos/cambiar-clave/cambiar
 import { AgregarMailComponent } from './modules/mis-datos/agregar-correo/agregar-mail/agregar-mail.component';
 import { ConfirmarCorreoComponent } from './modules/mis-datos/agregar-correo/confirmar-correo/confirmar-correo.component';
 import { PostulantesComponent } from './modules/inscripciones/postulantes/postulantes.component';
+import { CrearSeleccionComponent } from './modules/inscripciones/crear-seleccion/crear-seleccion.component';
+import { ListarSeleccionesComponent } from './modules/selecciones/listar-selecciones/listar-selecciones.component';
 
 const routes: Routes = [
 
@@ -32,29 +34,28 @@ const routes: Routes = [
       { path: 'mis_datos/correo/agregar_correo', component: AgregarMailComponent },
       { path: 'mis_datos/correo/confirmar_correo', component: ConfirmarCorreoComponent },
 
-
-
-      // { path: 'mis_datos', component: MisDatosComponent ,
-      //     children: [
-      //       { path: 'cambiar_clave', component: CambiarClaveComponent },
-      //       { path: 'agregar_correo',
-      //           children: [
-      //             { path: 'agregar_correo', component: AgregarMailComponent },
-      //             { path: 'confirmar_correo', component: ConfirmarCorreoComponent },
-      //           ] 
-      //      }
-      // ]},
-      
+    
       { path: 'mis_inscripciones', component: MisInscripcionesComponent },
+
       { 
         path: 'inscripciones',
         children: [
           { path: 'crear', component: CrearComponent },
           { path: 'listar', component: ListarComponent },
-          { path: 'postulantes', component: PostulantesComponent }
+          { path: 'postulantes', component: PostulantesComponent },
+          { path: 'crear_seleccion', component: CrearSeleccionComponent }
+        ]
+      },
 
+      { 
+        path: 'selecciones',
+        children: [
+          { path: 'listar', component: ListarSeleccionesComponent }
         ]
       }
+
+
+
      ]
   }
 

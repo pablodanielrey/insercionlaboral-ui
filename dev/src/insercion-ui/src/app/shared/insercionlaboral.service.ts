@@ -396,6 +396,23 @@ const ELEMENT_DATA2 = [
     envios:2,
 
   }
+];
+
+  const ELEMENT_DATA3 = [
+    { 
+      fecha: new Date(),
+      oferta: 'Full Time', 
+      empresa: 'Seguros Rivadavia',
+      postulantes: '15',
+      estado:'Activa',
+    },
+    { 
+      fecha: new Date(),
+      oferta: 'Pasantia', 
+      empresa: 'Cerveceria Quilmes ',
+      postulantes: '10',
+      estado:'Obsoleta',
+    }
 
 ];
 
@@ -413,6 +430,10 @@ export class InsercionlaboralService {
 
   obtenerPostulantes(uid: string): Observable<any[]> {
     return of(ELEMENT_DATA2);
+  }
+
+  obtenerSelecciones(uid: string): Observable<any[]> {
+    return of(ELEMENT_DATA3);
   }
 
 }

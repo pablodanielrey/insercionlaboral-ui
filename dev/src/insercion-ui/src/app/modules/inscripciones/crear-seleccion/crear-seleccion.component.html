@@ -1,0 +1,29 @@
+<mat-toolbar-row>
+        <button class="btnVolver" mat-button color="primary" routerLink="/sistema/inscripciones/postulantes"> <mat-icon>undo </mat-icon> VOLVER </button>
+        <button class="btnVolverCel" mat-icon-button color="primary" routerLink="/sistema/inscripciones/postulantes"> <mat-icon>undo</mat-icon> </button>
+        <span class="ruta">&nbsp; Crear Selección</span>
+    </mat-toolbar-row>
+        
+    <mat-divider></mat-divider>
+        
+    <div class="pantalla ">  
+        
+            <form class="formulario">
+
+                    <mat-form-field>
+                            <input matInput [matDatepicker]="picker" placeholder="Fecha">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+    
+                    <mat-form-field>
+                            <mat-label>Empresa </mat-label>
+                            <input matInput placeholder="Correo Electrónico">
+                    </mat-form-field>
+             
+            </form>
+            
+            <button mat-flat-button routerLink="/sistema/selecciones/listar" color="primary" class="btnGuardar"> CREAR SELECCIÓN</button>
+            
+        
+    </div>

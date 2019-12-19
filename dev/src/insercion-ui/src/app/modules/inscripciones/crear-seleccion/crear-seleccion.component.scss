@@ -51,16 +51,28 @@
       opacity: 1;
     }
   }
-
-  .toolbar {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-  }
   
-  .mat-column-numero {
-    flex: 0 0 40px;
-    padding-left: 10px;
-  }
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    min-width: 300px;
+    @media screen and (max-width: 768px) {
+    width: 100%;
+    }
 
+}
+
+
+.btnGuardar {
+    margin-top: 20px;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      padding: 20px 10px 20px 10px;
+      }
+}
+
+.iconos {
+  opacity: 0.5;
+}
 

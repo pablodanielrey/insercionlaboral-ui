@@ -1,0 +1,79 @@
+<mat-toolbar-row class="toolbar">
+        <div>
+            <button class="btnVolver" mat-button color="primary" routerLink="/sistema/inscripciones/listar"> <mat-icon>undo </mat-icon> VOLVER </button>
+            <button class="btnVolverCel" mat-icon-button color="primary" routerLink="/sistema/inscripciones/listar"> <mat-icon>undo</mat-icon> </button>
+            <span class="ruta">&nbsp; Selecciones</span>
+        </div>
+        <div>
+        </div>
+    
+    </mat-toolbar-row>
+            
+        <mat-divider></mat-divider>
+            
+        <div class="pantalla ">  
+            
+                <div class="contenedorTabla mat-elevation-z8">
+    
+    
+                        <mat-table class="tabla" matSort [dataSource]="inscripciones_filtradas$ | async" multiTemplateDataRows>
+                
+ 
+    
+                        
+                            <ng-container matColumnDef="fecha" >
+                                <mat-header-cell mat-sort-header *matHeaderCellDef > Fecha </mat-header-cell>
+                                <mat-cell *matCellDef="let n" > 
+                                    {{n.fecha | date: 'dd/MM/yyyy'}}
+                                </mat-cell>  
+                            </ng-container>
+
+                            <ng-container matColumnDef="empresa" >
+                                    <mat-header-cell mat-sort-header *matHeaderCellDef > Empresa </mat-header-cell>
+                                    <mat-cell *matCellDef="let n" > 
+                                        {{n.empresa}}
+                                    </mat-cell>  
+                            </ng-container>
+
+                            <ng-container matColumnDef="oferta" >
+                                    <mat-header-cell mat-sort-header *matHeaderCellDef > Oferta </mat-header-cell>
+                                    <mat-cell *matCellDef="let n" > 
+                                        {{n.oferta}}
+                                    </mat-cell>  
+                            </ng-container>
+                
+                            <ng-container matColumnDef="postulantes" >
+                                    <mat-header-cell mat-sort-header *matHeaderCellDef > Postulantes </mat-header-cell>
+                                    <mat-cell *matCellDef="let n" > 
+                                        {{n.postulantes}}
+                                    </mat-cell>  
+                            </ng-container>
+
+                            <ng-container matColumnDef="estado" >
+                                    <mat-header-cell mat-sort-header *matHeaderCellDef > Estado </mat-header-cell>
+                                    <mat-cell *matCellDef="let n" > 
+                                        {{n.estado}}
+                                    </mat-cell>  
+                            </ng-container>
+                
+                          
+                
+                            <ng-container matColumnDef="acciones" stickyEnd>
+                                    <mat-header-cell *matHeaderCellDef > Acciones </mat-header-cell>
+                                    <mat-cell *matCellDef="let n" > 
+                                        <button mat-icon-button matTooltip="Compartir" matTooltipPosition="left"><mat-icon>share</mat-icon></button>
+                                        <button mat-icon-button matTooltip="Detalle" matTooltipPosition="left"><mat-icon>zoom_in</mat-icon></button>
+                                        <button mat-icon-button matTooltip="Eliminar Selección" matTooltipPosition="left" ><mat-icon>delete_outline</mat-icon></button>
+                                    </mat-cell>  
+                            </ng-container>
+                        
+                            <mat-header-row *matHeaderRowDef="columnas(); sticky: true"></mat-header-row>
+                            <mat-row *matRowDef="let row; columns: columnas();"></mat-row>        
+                        
+                        </mat-table>
+                
+                    </div>
+                
+                
+            
+        </div>

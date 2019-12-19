@@ -1,8 +1,14 @@
-<mat-toolbar-row>
+<mat-toolbar-row class="toolbar">
+    <div>
         <button class="btnVolver" mat-button color="primary" routerLink="/sistema/inscripciones/listar"> <mat-icon>undo </mat-icon> VOLVER </button>
         <button class="btnVolverCel" mat-icon-button color="primary" routerLink="/sistema/inscripciones/listar"> <mat-icon>undo</mat-icon> </button>
         <span class="ruta">&nbsp; Postulantes</span>
-    </mat-toolbar-row>
+    </div>
+    <div>
+        <button mat-raised-button color="primary" matTooltip="Enviar Postulantes" matTooltipPosition="left" class="btnFiltros" routerLink="/sistema/inscripciones/crear_seleccion">CREAR SELECCIÓN</button>
+    </div>
+
+</mat-toolbar-row>
         
     <mat-divider></mat-divider>
         

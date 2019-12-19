@@ -17,6 +17,8 @@ import { CambiarClaveComponent } from './modules/mis-datos/cambiar-clave/cambiar
 import { AgregarMailComponent } from './modules/mis-datos/agregar-correo/agregar-mail/agregar-mail.component';
 import { ConfirmarCorreoComponent } from './modules/mis-datos/agregar-correo/confirmar-correo/confirmar-correo.component';
 import { PostulantesComponent } from './modules/inscripciones/postulantes/postulantes.component';
+import { CrearSeleccionComponent } from './modules/inscripciones/crear-seleccion/crear-seleccion.component';
+import { ListarSeleccionesComponent } from './modules/selecciones/listar-selecciones/listar-selecciones.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { PostulantesComponent } from './modules/inscripciones/postulantes/postul
     CambiarClaveComponent,
     AgregarMailComponent,
     ConfirmarCorreoComponent,
-    PostulantesComponent
+    PostulantesComponent,
+    CrearSeleccionComponent,
+    ListarSeleccionesComponent
   ],
   imports: [
     BrowserModule,
