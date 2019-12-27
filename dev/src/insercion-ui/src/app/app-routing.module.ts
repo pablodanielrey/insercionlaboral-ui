@@ -16,12 +16,15 @@ import { ConfirmarCorreoComponent } from './modules/mis-datos/agregar-correo/con
 import { PostulantesComponent } from './modules/inscripciones/postulantes/postulantes.component';
 import { CrearSeleccionComponent } from './modules/inscripciones/crear-seleccion/crear-seleccion.component';
 import { ListarSeleccionesComponent } from './modules/selecciones/listar-selecciones/listar-selecciones.component';
+import { SeleccionComponent } from './core/seleccion/seleccion.component';
 
 const routes: Routes = [
 
   { path: 'debug', component: DebugComponent },
   { path: 'oauth2', component: Oauth2Component }, 
   { path: 'loader', component: LoaderComponent }, 
+  { path: 'seleccion', component: SeleccionComponent }, 
+
   {
      path:'sistema',
      canActivate: [OidpGuard],

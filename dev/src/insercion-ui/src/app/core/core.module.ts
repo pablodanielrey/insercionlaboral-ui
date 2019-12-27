@@ -60,6 +60,7 @@ import { DialogoComponent } from './dialogo/dialogo.component';
 import { InfoComponent } from './modal/info/info.component';
 import { WarningComponent } from './modal/warning/warning.component';
 import { ConfirmComponent } from './modal/confirm/confirm.component';
+import { SeleccionComponent } from './seleccion/seleccion.component';
 
 
 const routes: Routes = [
@@ -83,7 +84,8 @@ const routes: Routes = [
     DialogoComponent,
     InfoComponent,
     WarningComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    SeleccionComponent
   ],
   entryComponents: [
     ModalError,

@@ -1,0 +1,33 @@
+.toolbar {
+box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+}
+
+.subtitulo {
+    opacity: 0.5;
+    margin-left: 20px;
+}
+
+.pantalla {
+    padding: 20px;
+}
+
+.icono {
+    opacity: .5;
+    margin-right: 5px;
+    margin-left: 10px;
+}
+
+.postulantes {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.postulante {
+    width: 250px;
+    margin: 20px;
+}
+
+img {
+    height: 188px;;
+}
