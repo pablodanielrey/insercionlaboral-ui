@@ -1,3 +1,11 @@
 .dialogo {
     min-width: 500px;
 }
+
+.contenedorlink {
+ display: flex;
+ align-items: center;
+ margin-bottom: 20px;
+ justify-content: space-between;
+ width: 70%;
+}

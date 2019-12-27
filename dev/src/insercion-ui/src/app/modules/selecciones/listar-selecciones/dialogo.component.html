@@ -1,14 +1,19 @@
 <div class="dialogo">
-    <div>COMPARTIR</div>
-    <mat-divider></mat-divider>
+    <h3>COMPARTIR <mat-icon>share</mat-icon> </h3>
+    <!-- <mat-divider></mat-divider> -->
     <p>Usa el link para compartir la lista de postulantes seleccionados. </p>
 
-    <div>
-            <h2>bit.ly/45Ml450K3</h2>  
+    <mat-toolbar class="contenedorlink">
+        <div><h2>bit.ly/45Ml450K3</h2></div>
+        <div>
             <button mat-icon-button> <mat-icon>file_copy_outlined</mat-icon> </button>
             <button mat-icon-button> <mat-icon>open_in_new</mat-icon> </button>
+        </div> 
+    </mat-toolbar>
 
-    </div>
+    <mat-dialog-actions align="end">
+        <button mat-raised-button  mat-dialog-close >CERRAR</button>
+    </mat-dialog-actions>
 
 
 </div>
